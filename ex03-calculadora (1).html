@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemaático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+         
+
+        let num1 = prompt ( "Digite um primeiro número" )
+        let num2 = prompt ( " Digite um segundo número" )
+        let operador  = prompt ( "Digite um operador Matemático")
+        let resultado = prompt ( " O resultado da operação é ")
+
+        if ( operador == " + " ){
+             num1 + num2 
+        }
+
+        if ( operador == " - " ){
+           alert ("resultado = num1 - num2 == op" ) 
+        }
+
+        if ( operador == " * " ) {
+           alert ("resultado = num1 * num2 == op" ) 
+        }   
+     
+        if ( operador == " / " ){
+         alert ("resultado = num1 / num2  == op" ) 
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
