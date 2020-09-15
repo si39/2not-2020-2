@@ -24,10 +24,78 @@
 
             Efetue o cálculo apropriado de acordo com o operador informado
             e informe o resultado usando document.write().
-        */
-         
+             */
+          
 
-        var num1 = prompt("Primeiro numero: ");
+
+          // parseFloat() *tenta* Converter Strings em números de ponto Flutuante
+          let num1 = parseFloat(prompt("Informe o primeiro número"))
+          let num2 = parseFloat(prompt("Informe o segundo número"))
+          let oper = prompt("Informe a operação desejada(+,-,*,x,X, / ou :)")
+
+          let res, temErro = false
+
+          // Teste de validação dos números
+          if(isNaN(num1) || isNaN(num2){
+              alert("ERRO: pelo menos um dos números informados é inválido.")
+          }
+         
+          else if(oper == "+"){
+              res = num1 + num2
+          }
+         
+         else if(oper == "-"){
+              res = num1 - num2
+          }
+
+          else if(oper == "*" || oper == "x"  oper == "X"){
+              res = num1 * num2
+          }
+
+          else if(oper == "/" || oper == ":"){
+              res = num1 / num2
+          }
+
+          else{
+           alert("Erro: o operador informado é inválido.")
+           temErro = true
+          }
+
+          else{
+              switch(oper){
+               case "+":
+                   res = num1 + num2
+               
+               case "-":
+                   res = num1 - num2   
+              }
+              
+              case "X":  //CASE VAZIO
+              case "X":  //CASE VAZIO
+              case "*":
+
+              res = num1 * num2
+              
+              case "/":  //CASE VAZIO
+              case ":":  
+              
+              res = num1 / num2 
+
+              default:  //se não entrar em nenhum case
+                    
+          if(!temErro){
+         // document.write("O resultado da operação: "+ num1"  "+oper" "+ num2 + " "é igual a" + res + "." )
+         //é igual a " + res + "."}
+
+         //Usando string templante (que usa acentos graves - backtick)
+         document.write("O resultado da operação: ${num1} ${oper} ${num2} é igual a ${res}.") 
+
+
+
+
+          
+
+       /* var num1 = prompt("Primeiro numero: ");
     num1 = parseInt(num1);
 
     var num2 = prompt("Segundo  numero: ");
