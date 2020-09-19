@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+    //'use strict impede que variáveis sejam declaradas'
+         // 'sem o uso de let, var ou const'
+         //Inicializar variáveis diretamente é má prática de
+         //programação
+         'use strict'
+
+          /*
+          LOOP DA SOMA DOS NÚMEROS ATÉ QUE SEJA ZERO
+          */
+
+         let soma = 0
+         let num 
+
+         /*
+         CARACTERÍSTICAS DO LOOP do...while
+         1)LOCAL DO TESTE : no final
+         2)GARANTIA DE EXECUÇÃO: 1(um)
+         3)Número de repetições: indeterminado
+         */
+        
+
+         do{
+             let num = Number(prompt("Digite um número para somar (ou 0 para terminar):"))
+
+             if(!isNan(num)){
+                 soma += num
+
+         } while(num != 0 )
+
+         document.write("A soma dos números informados é ${soma}")
+
+        
+
+
+
+
+
+         </script>
+
+         </head>  
+         <body>   
+
+         </body>
+         </html>

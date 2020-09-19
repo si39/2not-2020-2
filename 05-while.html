@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+    //'use strict impede que variáveis sejam declaradas'
+         // 'sem o uso de let, var ou const'
+         //Inicializar variáveis diretamente é má prática de
+         //programação
+         'use strict'
+
+        /*
+        PEÇA AO USUSÁRIO PARA INFORMAR NÚMEROS, REPETIDAMENTE. ESSES NÚMEROS VÃO SENDO SOMADOS
+        ATÉ QUE O USUÁRIO INFORME 0.
+        ENTÃO O RESULTADO DA SOMA É EXIBIDO.
+        */ 
+
+       let soma = 0
+
+       // let num = Number(prompt("Informe um número a ser somado(ou 0 para terminar):"))
+
+       let num = 1 // QUALQUER COISA QUE NÃO SEJA 0
+
+       /*
+       CARACTERÍSTICAS DO LOOP WHILE
+       1) LOCAL DO TESTE: NO INÍCIO
+       2) GARANTIA DE EXECUÇÃO: 0 (zero)
+       3) NÚMERO DE REPETIÇÕES: INDETERMINADO
+       */
+
+       //ESTRUTURA DE REPETIÇÃO: WHILE
+
+       while(num !=0){
+           //NUMBER TEM O MESMO EFEITO DO parseFloat
+           num = Number(prompt("Informe um número a ser somado (ou 0 para terminar):"))
+
+           //O NÚMERO SÓ ENTRA PARA A SOMA SE FOR VÁLIDO
+           if(!isNan(num)){
+           soma += + num  //soma = soma  + num         
+       }
+
+       document.write("A soma dos números informados é $ {soma}.")
+
+
+       
+
+
+
+
+    </script>
+   </head>
+<body>
+    
+</body>
+</html>    
