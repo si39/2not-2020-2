@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Documento HTML</title>
+    
+
+</head>
+<body>
+    <h1>Título da página</h1>
+    <p>Isto é um parágrafo</p>
+    <ul>
+       <li>Primeiro item</li>
+       <li id= "Intruso">Intruso</li>
+       <li>Segundo item</li>
+       <li id="item-x">Terceiro item</li>
+    </ul>
+        <script>
+            /*
+              QUANDO O JAVASCRIPT É UTILIZADO PARA MANIPULAR HTML,
+              A SEÇÃO <SCRIPT> DEVE SER POSICIONADA NA PARTE FINAL DO ARQUIVO
+              LOGO ANTES DO </BODY>
+             */
+
+         //'use strict' impede que variáveis sejam declaradas
+         // sem o uso de let, var ou const
+         // Inicializar variáveis diretamente é má prática de
+         // programação
+        'use strict'
+
+        /*
+        DOM = DOCUMENT OBJECT MODEL (MODELO DE OBJETOS DE DOCUMENTO)
+        */
+
+        //document.query: retorne o primeiro elemento de seu tipo
+        const cabec = document.querySelector('h1')
+
+        //Alterando o texto interno do elemento 
+        cabec.interHTML = 'Manipulando o Document Object Model (DOM)'
+
+        /*
+         ALTERANDO O TEXTO DO SEGUNDO ITEM
+        */
+        
+        //document.querySelectorAll: CAPTURA TODOS OS ELEMENTOS DO TIPO INFORMADO
+        const itens = document.querySelectorAll('li')
+
+        //EM JAVASCRIPT, O PRIMEIRO ELEMENTO É O DE ÍNDICE 0 (ZERO)
+        itens[1].innerHTML = 'Bertoldo'
+
+        //FORMA TRADICIONAL 
+        const itens2 = document.getElementByTagName('li')
+        itens[2].innerHTML = 'Jerônimo'
+
+        //CAPTURANDO UM ELEMENTO POR id DA FORMA ANTIGA
+        const elemIntruso = document.getElementById('intruso')
+        elemIntruso.innerHTML = 'SOU UM INTRUSO' 
+
+        //CAPTURANDO UM ELEMENTO POR id DA FORMA NOVA (ES5+)
+        //PARA CAPTURAR POR id COM O querySlector(), é necessário usar #
+        //Antes do id do elemento        
+        const elemX = document.querySelector('#item-x')
+        elemX.style.backgroundColor = 'yellow'
+
+
+
+    </script>
+   
+   </body>
+</html> <!-- tag de fechamento html -->
