@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+    //'use strict impede que variáveis sejam declaradas'
+         // 'sem o uso de let, var ou const'
+         //Inicializar variáveis diretamente é má prática de
+         //programação
+         'use strict'
+          
+          //Declaração de variáveis em JS
+          // Declarando três variáveis separadamente
+          // têm valor inicial undefined
+
+          //PROVA 1
+
+          var kmlombofaixa = 29
+          //como o km 1 fica em São Paulo é neccessário fazer um loop ao contrário
+
+          //se o resto da divisão for zero, quero dizer que é um km que haverá lombofaixa  
+          for (var i = 400; i >=; i--){
+              if(i% kmlombofaixa==0)
+          }
+          //imprimir o km que haverá lombofaixa
+          document.write("lombofaixa no km: "+i + "<br>")
+
+           // prompt para verificar
+  let km = Number(prompt("Digite um km para verificar se há algo francano:"))
+  // validar se é um km valido
+  if (Number.isInteger(km) && km >= 1 && km <= 400) {
+      // switch das coisas de franca
+      switch (km) {
+                case 92:
+                document.write('Megalojas do Magazine Luiza' +  '<br>')
+            break;
+        case 153:
+            document.write('Drive-thru dos Calçados Rafarillo' +  '<br>')
+            break;   
+        case 177:
+            document.write('Megalojas do Magazine Luiza' +  '<br>')
+            break;
+        case 187:
+            document.write('Posto de recarga da Viação São José' +  '<br>')
+            break;   
+        case 210:
+            document.write('Filial da Padaria Estrela' +  '<br>')
+            break;       
+        case 291:
+            document.write('Megalojas do Magazine Luiza' +  '<br>')
+            break;
+        case 314:
+            document.write('Fábrica do Jubileu do Amendoim' +  '<br>')
+            break;   
+        case 356:
+            document.write('Drive-thru dos Calçados Rafarillo' +  '<br>')
+            break;   
+        case 367:
+            document.write('Franca AcquaParque Unidade II' +  '<br>')
+            break;               
+                default:
+            document.write('Vapo, tem nada aqui não. Segue reto toda vida, meu fii.' +  '<br>')       
+      }
+  } else {
+     // caso o usuário tenha informado um km inválido
+     document.write('km inválido.' +  '<br>')       
+  }
+
+          
+
+
+
+    
+</head>
+<body>
+    
+</body>
+</html>
