@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+
+         //'use strict impede que variáveis sejam declaradas'
+         // 'sem o uso de let, var ou const'
+         //Inicializar variáveis diretamente é má prática de
+         //programação
+         'use strict'
+          
+          //Declaração de variáveis em JS
+          // Declarando três variáveis separadamente
+          // têm valor inicial undefined
+
+          //PROVA 1
+
+          /*
+           Faça um loop for para escrever no documento, com document.write(), apenas os quilômetros nos quais
+           haverá lombofaiza no sentido Franca-São Paulo, lembrando que o km 1 fica em São Paulo
+          */
+
+          for (let km = 400; km >= 1; km--) {
+               if(km % 29 == 0){
+                    document.write(´Lombofaixa no quilômetro ${km}<br>´)
+                }
+             }
+
+            /*
+            Em seguida peça ao usuário para informar um quilômetro entre 1 e 400.
+            Faça a verificação se o usuário realmente informou um número inteiro e se o número 
+            informado está na faixa esperada usando do...while
+            */
+
+             let quilômetro
+             do{
+                 quilometro = parseInt(prompt('Informe um quilômetro entre 1 e 400:'))
+             }while(isNaN(quilometro) || quilometro < 1 || quilometro > 400) 
+
+             /*
+             Se o quilômetro especificado for válido, use uma estrutura switch..case
+             para informar ao usuário se existe algo "francano" no quilômetro em questão, 
+             conforme dados do quadro amarelo acima. Caso não haja nenhuma francanice 
+             ali, exiba a mensagem "Vapo, tem nada aqui não. Segue reto toda vida meu fii"
+             */
+               
+             let msg
+             switch (quilometro) {
+                case 92:
+                case 177:
+                case 291:
+                case 388:
+                     msg = 'Megalojas do Magazine Luiza' 
+                     break
+             
+                 case 153:
+                 case 356: 
+                      msg = 'Drive-thru dos Calçados Rafarillo'
+                      break
+                
+                case 187:
+                     msg = 'Posto de recarga da Viação São José' 
+                     break 
+           
+                case 210:
+                     msg = 'Filial da Padaria Estrela' 
+                     break      
+        
+                case 314:
+                     msg ='Fábrica do Jubileu do Amendoim'
+                     break
+        
+                case 367:
+                     msg = 'Franca AcquaParque Unidade II' 
+                    break
+
+                default:
+            document.write 'Vapo, tem nada aqui não. Segue reto toda vida, meu fii.'
+            
+             }
+             alert(msg)
+
+
+
+    
+</head>
+<body>
+    
+</body>
+</html>
