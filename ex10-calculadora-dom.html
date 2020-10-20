@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+
+  label{
+  background: #fff;
+  display: block;
+  }
+
+  fieldset label{
+  display: inline;        
+  }  
+
+  fieldset{
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  width: 200px;
+  }
+
+  div, fieldset{
+  margin-bottom: 15px
+  }
+
+
+
+  </style>
+</head>
+<body>
+
+  <h1> Calculadora </h1>   
+
+  <div>
+    <label>Primeiro Número</label>
+    <input type="number" id="num1" placeholder="0">
+  </div>
+
+  <div>
+    <label>Segundo Número</label>
+    <input type="number" id="num2" placeholder="0">
+  </div>
+
+  <div> 
+    <label>Operação Aritmética</label><br> 
+    <select id="operacao"><br>
+      <option disabled selected>(Selecione)</option>
+      <option value="soma">Soma</option>
+      <option value="subtracao">Subtração</option>
+      <option value="multiplicacao">Multiplicação</option>
+      <option value="divisao">Divisão</option>
+      <option value="potenciacao">Potenciação</option>
+      <option value="resto">Resto da Divisão</option>
+    </select>           
+  </div>
+
+  <div>  
+  <button id="calcular">Calcular</button> 
+  </div>
+
+  <div id="resultado">
+  <label>Resultado da Operação Aritmética</label>
+  </div>
+
+<script>
+         //'use strict' impede que variáveis sejam declaradas
+         // sem o uso de let, var ou const
+         // Inicializar variáveis diretamente é má prática de
+         // programação
+        'use strict'     
+
+         /* 
+
+            Monte um formulário com os seguintes campos:
+            ****** Primeiro número (input numérico)
+            ****** Operação aritmética (select, com as opções de soma, subtração,
+                multiplicação, divisão, potenciação e resto da divisão)******
+            ******* Segundo número (input numérico)
+            ****** Div para exibição do resultado da operação aritmética******
+            ****** Botão "calcular"
+
+            Validações:
+            * Os campos de número devem estar preenchidos e com números válidos
+            * Deve ter sido selecionada uma operação artimética válida
+
+        */      
+
+        const elNumero1 = document.getElementById('num1')
+  const elNumero2 = document.getElementById('num2')
+  const elOperacao = document.getElementById('operacao')
+
+  const elCalcular = document.querySelector('#calcular')
+  const elResultado = document.querySelector('#resultado')
+
+  function validar() {
+
+    let valido = true
+    if(elNumero1.value == 0){
+      alert("O primeiro número dever ser informado")
+      elNumero1.focus() 
+      valido = false
+    }
+
+    else if(elNumero2.value == 0){
+      alert('O segundo número deve ser informado.')
+      elNumero2.focus()
+      valido = false
+    }
+    
+    else if (elOperacao.selectedIndex == 0) {
+      alert('Informe um operador VÁLIDO.')
+      elOperacao.focus()
+      valido = false
+    }
+
+    return valido
+  }
+
+  function resultado (){
+    
+    if(validar()){
+      let result = 0
+      switch(elOperacao.value){
+
+      case 'soma': 
+        result = Number(elNumero1.value) + Number(elNumero2.value)
+        elResultado.innerText += `: ${result}`
+      break
+
+      case 'subtracao':
+        result = elNumero1.value - elNumero2.value
+        elResultado.innerText += `: ${result}`
+      break
+
+      case 'multiplicacao':
+        result = elNumero1.value * elNumero2.value
+        elResultado.innerText += `: ${result}`
+      break
+
+      case 'divisao':
+        result = elNumero1.value / elNumero2.value
+        elResultado.innerText += `: ${result}`
+      break
+
+      case 'potenciacao':
+        result = elNumero1.value ** elNumero2.value
+        elResultado.innerText += `: ${result}`
+      break
+
+      case 'resto':
+        result = elNumero1.value % elNumero2.value
+        elResultado.innerText += `: ${result}`
+      break
+      }
+    }
+  }
+
+  elCalcular.addEventListener('click', resultado)
+
+</script>
+</body>
+</html>
