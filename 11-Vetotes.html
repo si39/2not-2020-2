@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Documento HTML</title>
+    
+<script>
+         //'use strict' impede que variáveis sejam declaradas
+         // sem o uso de let, var ou const
+         // Inicializar variáveis diretamente é má prática de
+         // programação
+        'use strict'
+
+
+        // DECLARANDO UM VETOR VAZIO
+        let vetor1 = []         // FORMA MODERNA
+        let vetor2 = Array()    // FORMA TRADICIONAL
+
+       // DECLARANDO E INICIALIZANDO VETORES COM ELEMENTOS
+       let carros = ['Fusca','Del Rey','Passat','Opala']
+       let cores  = Array ['verde', 'laranja','branco','vermelho','amarelo','rosa']
+       let numeros = Array [2,3,5,7,11,13,17,19]
+
+       //VETORES DE TIPOS MISTURADOS
+        let mistura = ['Joao das Coves', 63, false, null,undefined]
+
+        let frutas = []
+
+        /*push(): insere novos elementos no final do Vetor*/
+        frutas.push('laranja')
+        frutas.push('melancia')
+        frutas.push('maça','limão','pera') //pode inserir mais de um elemento de uma vez
+        console.log(futas)
+
+
+        /* unshift(): insere novos elementos no Início do vetor */
+        frutas.unshift('jabuticaba') // coloca a jabuticaba na primeira posição
+        frutas.unshift('amora')
+
+        /* frutas.pop(), retira UM elemento do FINAL do VETOR*/
+        let retirado = frutas.pop()//retira e coloca uma variável
+        frutas.pop()               // retira e perde o elemento apenas um de cada vez
+        console.log ('Retirado:', retirado)
+
+       /* frutas.shift(), retira UM elemento do INÍCIO do VETOR*/
+        frutas.shift()             //retira o primeiro elemento da lista E PERDE     
+        retirado = frutas.shift()  //retira e coloca em uma variável
+        console.log ('Retirado:', retirado)
+
+       //no meio do código é necessário indicar a posição por exemplo 2
+       //splice(): insere elementos em uma posição específica do vetor E PODE RETIRAR TAMBÉM, 
+       // É UMA FUNÇÃO MULTIUSO
+       /*PARÂMETROS:
+         1° A POSIÇÃO ONDE SERÁ FEITA A INSERÇÃO
+         2° QUANTOS ELEMENTOS SERÃO APAGADOS (PARA INSERÇÕES, DEVE SER ZERO(0))
+         3° EM DIANTE: OS ELEMENTOS SERÃO INSERIDOS
+         4° FAZ PRATICAMENTE A FUNÇÃO DOS ANTERIORES DESDE QUE BEM INFORMADO
+       */
+        frutas.splice(2,0, 'morango')
+        frutas.splice(1,0, 'jaca','ameixa')
+
+        /* Usando o splice() para fazer substituição  */
+        frutas.splice(3,1, 'manga') // um elemento será apagado e substituido na posição 3
+
+        /* Usando o splice() para fazer retirada de uma posição específica do vetor */
+        /*PARÂMETROS:
+         1° A POSIÇÃO ONDE SERÁ FEITA A RETIRADA
+         2° QUANTOS ELEMENTOS SERÃO REMOVIDOS (>0)
+         
+       */
+        retirado = frutas.splice(1,1)
+        console.log('Retirado:', retirado)
+
+        //colocando novos elementos para massa de teste
+        frutas.push('framboesa', 'caju', 'maracujá', 'mexerica')
+
+        //retirando vários elementos de uma vez
+        retirado = frutas.splice(4,3) // A PARTIR DA POSIÇÃO 4, RETIRE 3 ELEMENTOS
+        console.log('Retirado:', retirado)
+
+        //retirando o último elemento do vetor, ele conta de trás pra frente
+        frutas.splice(-1,1) // Posição negativa conta as posições de trás pra frente
+
+        //length: retorna o número de elementos do vetor
+        //lembrar sempre de terminar a palavra length com TH
+        console.log('Número de elementos:',frutas.length) //não pode ser lenght
+
+
+        //indexOf: retorna a posição da primeira ocorrência do valor especificado ou -1
+        // caso o valor não existe no vetor
+        console.log('ameixa:', frutas.indexOf('ameixa')) //indexOf: ameixa existe e está na posição tal
+        console.log('melão:', frutas.indexOf('melão'))//indexOf: retorna posição -1 pois não existe na lista
+        console.log('morango:', frutas.indexOf('morango'))
+
+        if(frutas.indexOf('manga')>= 0){
+            console.log('Existe')
+        }
+        else{
+            console.log('Não existe')
+        }
+
+        // includes(): retorna se o valor de busca (true) ou não existe (false)
+        console.log('ameixa:', frutas.indexOf('ameixa')) //indexOf: ameixa existe e está na posição tal
+        console.log('melão:', frutas.indexOf('melão'))//indexOf: retorna posição -1 pois não existe na lista
+        console.log('morango:', frutas.indexOf('morango'))
+
+        if(frutas.includes('jambo')){
+            console.log('Existe')
+        }
+        else{
+            console.log('Não existe')
+        }
+        
+ </script>    
+
+
+
+  
+ </head>
+        <body>
+
+ 
+       </body>
+       </html>
